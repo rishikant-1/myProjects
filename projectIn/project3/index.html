@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toggle</title>
+</head>
+<style>
+  body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    transition: .7s ease;
+  }
+  .input{
+    visibility: hidden;
+  }
+  .label{
+    height: 40px;
+    width: 80px;
+    background-color: #8688ff;
+    position: absolute;
+    border-radius: 20px;
+  }
+  .circle{
+    height: 35px;
+    width: 35px;
+    background-color: #af35ec;
+    border-radius: 50%;
+   position: absolute;
+   top: 2px;
+   left: 2px;
+   transition: .4s ease;
+   animation: toggleoff .4s linear forwards;
+  }
+  .input:checked + .label{
+    background-color: #b6b6b6;
+  }
+  .input:checked + .label .circle{
+    background-color: black;
+    transition: .4s ease;
+    animation: toggleon .4s linear forwards;
+  }
+ @keyframes toggleon {
+  0%{
+   transform: translateX(0);
+  }
+  100%{
+   transform: translateX(40px);
+  }
+ }
+ @keyframes toggleoff {
+  0%{
+   transform: translateX(40px);
+  }
+  100%{
+   transform: translateX(0px);
+  }
+ }
+</style>
+<body>
+  <input type="checkbox" id="dark-mode"class="input">
+  <label for="dark-mode" class="label">
+    <div class="circle"></div>
+  </label>
+  <script>
+      const input = document.querySelector('.input');
+      const bodyElm = document.querySelector('body');
+      
+      function updateMode() {
+        if (input.checked) {
+          bodyElm.style.backgroundColor = 'black';
+        } else {
+          bodyElm.style.backgroundColor = 'white';
+        }
+        saveMode();
+      }
+      function saveMode(){
+        localStorage.setItem("mode", JSON.stringify(input.checked));
+      }
+      function loadMode(){
+        const saveMode= localStorage.getItem("mode");
+        if(saveMode !==null){
+          input.checked=JSON.parse(saveMode);
+          updateMode()
+        }
+      }
+      input.addEventListener('change', updateMode);     
+      // Load saved mode on page load
+      loadMode();
+  </script>
+</body>
+</html>

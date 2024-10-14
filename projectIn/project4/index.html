@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: cursive;
+    }
+    .main {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-image: url(preee.jpg);
+    }
+    .clock_container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+    p {
+      color: white;
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .hours {
+      height: 150px;
+      width: 130px;
+      background-color: rgba(17, 52, 228, 0.881);
+      font-size: 60px;
+      font-weight: 700;
+      color: white;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .ampm {
+      padding: 10px;
+      background-color: rgba(44, 247, 44, 0.738);
+      color: white;
+      margin-top: 105px;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <p>Digital clock</p>
+      <div class="clock_container">
+        <div class="hours" id="hourse">2</div>
+        <div class="hours" id="minuts">20</div>
+        <div class="hours" id="second">43</div>
+        <div class="ampm">Am</div>
+      </div>
+    </div>
+
+    <script>
+      let hours = document.getElementById("hourse");
+      let minuts = document.getElementById("minuts");
+      let second = document.getElementById("second");
+      let ampm = document.querySelector(".ampm");
+      
+      function updateTime() {
+        let current = new Date();
+        let currentHours = current.getHours();
+        let minute= current.getMinutes();
+        let seconds= current.getSeconds();
+        minute = minute < 10 ? "0" + minute : minute;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        currentHours= currentHours <10 ? '0'+ currentHours : currentHours; 
+        hours.innerText = currentHours;
+        minuts.innerText = minute;
+        second.innerText = seconds;
+
+        if (currentHours >= 12) {
+          hours.innerText = currentHours <= 12 ? 12 : currentHours - 12;
+          ampm.innerText = "PM";
+        } else {
+          hours.innerText = currentHours === 0 ? 12 : currentHours;
+          ampm.innerText = "AM";
+        }
+        
+        setTimeout(updateTime, 1000);
+      }
+      updateTime();
+    </script>
+  </body>
+</html>

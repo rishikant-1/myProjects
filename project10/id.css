@@ -1,0 +1,46 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  height: 80vh;
+  width: 40vw;
+  background-color: rgb(217, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+
+}
+.right{
+  height: 300px;
+  width: 180px;
+  border-radius: 50% 50% 0% 0%;
+  background-color: brown;
+  rotate: 46deg;
+  position: absolute;
+  left: 262px;
+}
+.left{
+  height: 300px;
+  width: 180px;
+  border-radius: 50% 50% 0% 0%;
+  background-color: brown;
+  rotate: -46deg;
+  position: absolute;
+  right: 262px;
+}
+.right, .left{
+  
+  animation: heartbeat .8s infinite ease-in;
+
+}
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1); 
+  filter: blur(8px);
+  }
+  100% { transform: scale(1); }
+}

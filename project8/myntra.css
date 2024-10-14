@@ -1,0 +1,253 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 80px;
+    justify-content: space-between;
+    /* background-color: #712323; */
+    box-shadow: 0 .5px 8px rgba(0, 0, 0, 1);
+}
+.navItems a{
+    font-size: 2vh;
+    text-decoration: none;
+    color: rgb(37, 36, 36);
+    padding: 0px 15px 0px;
+}
+.navItems :hover{
+    border-bottom: 4px solid rgb(230, 17, 116);
+    padding-bottom: 27px;
+}
+.navContainer{
+    /* margin-right: 15vh; */
+    max-width: 600px;
+    width: 100;
+}
+/* .navItems{
+    min-width: 0%;
+} */
+.navItems  a sup{
+    color: rgb(255,63,108);
+}
+.logo img{
+    height: 54px;
+    width: 80px;
+    margin-left: 30px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+.inputSearch{
+    max-width: 30vw;
+    width: 80vw;
+    height: 40px;
+    /* margin-right: 60px; */
+    background-color: #e9e8e8;
+    border-radius: 2px;
+    border: none;
+    opacity: .6;
+    padding-left: 10px;
+}
+.itemList{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 40px;
+    position: relative;
+}
+.item1{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000000;
+        /* max-width: 20vw; */
+    /* gap: 10px; */
+    /* margin-right: 10vh; */
+}
+.itemCount{
+    position: absolute;
+    right: 7px;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    background-color: rgb(255,63,108);
+    color: #e9e8e8;
+    font-size: 10px;
+    border-radius: 50%;
+}
+.icons{
+    font-size: 20px;
+}
+.slider{
+    /* width: 100vw; */
+    position: relative;
+    margin-top: 40px;
+}
+.sliderImage{
+    width: 100%;
+    position: absolute;
+}
+.myntraText h1{
+    font-size: 30px;
+    margin-top: 35vw;
+}
+ .card {
+    width: 150px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 1 4px 8px rgb(104, 103, 103);
+    transition: 0.5s;
+    position: relative;
+    margin-top: 50px;
+}
+.btn{
+    border: none;
+    padding: 5px 20px; 
+    cursor: pointer;
+}
+.btnBox :hover{
+    border-bottom: 2px solid rgba(122, 120, 120, 0.488);
+    background-color: rgb(213, 247, 179);
+}
+.btnBox{
+    text-align: center;
+}
+.desc p{
+    opacity: .5;
+    font-size: 14px;
+    /* line-height: 0px; */
+}
+.price{
+    font-size: 10px;
+}
+.localPrice{
+    font-size: 11px;
+    opacity: .4;
+    text-decoration: line-through;
+}
+.discount{
+    font-size: 10px;
+    color: rgb(255, 213, 0);
+}
+img {
+    width: 100%;
+    position: relative;
+    /* border-radius: 5px 5px 0 0;  */
+}
+.rating{
+    position: absolute;
+   bottom:110px;
+   left: 5px;
+   background-color: rgba(234, 234, 234, 0.789);
+}
+.card:hover {
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+} 
+.myntraCart{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+   justify-content: space-evenly; 
+}
+.cartList{
+    /* margin-top: 40px; */
+    display: flex;
+   justify-content: space-evenly;
+}
+.container{
+    display: flex;
+    /* align-items: start; */
+    justify-content: center;
+    margin-top: 100px;
+    gap: 40px;
+}
+.cartImage{
+    height: 18  0px;
+    width: 150px;
+}
+.containerItem{
+    padding: 10px;
+    width: 40vw;
+    border: 1px solid rgb(223, 222, 222);
+    display: flex;
+    position: relative;
+    gap: 10px;
+    line-height: 20px;
+}
+.cross{
+    position: absolute;
+    right: 10px;
+    font-size: 23px;
+    opacity: .6;
+    top: 10px;
+    cursor: pointer;
+}
+.containerTotalPrice{
+    width: 20vw;
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+}
+.brandName{
+    font-size: 14px;
+}
+.t-shirt{
+    opacity: .6;
+    font-size: 14px;
+}
+.returnPolicy{
+    font-weight: bold;
+    font-size: 13px;
+    /* margin-bottom: 10px;  */
+}
+.DaysAvailable{
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 20px;
+}
+.returnItem{
+    opacity: .7;
+    /* margin-top: 10px; */
+}
+.deelTime{
+    color: rgb(43, 189, 189);
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+.placeButton{
+    padding: 10px 105px;
+    margin-top: 20px;
+    background-color: rgb(255,63,108);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.point{
+    position: absolute;
+    bottom: 180px;
+    display: flex;
+    right: 45%;
+}
+.dot{
+    height: 5px ;
+    width: 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 3px;
+    cursor: pointer;
+}
+.t{
+    position: absolute;
+    top: 80%;
+    right: 45%;
+}

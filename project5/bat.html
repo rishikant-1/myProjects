@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>bat ball</title>
+        <link rel="stylesheet" href="bat.css">
+    </head>
+    <body>
+        <div class="box1">
+        <h1>Bat ball stump Game</h1>
+            <button
+            onclick="
+            computerChoice=computerChoiceIs();
+            let resultMsg =getMoves('Bat', computerChoice);
+            showResult('Bat', computerChoice, resultMsg);
+            ">Bat</button>
+            <button onclick="
+            yourChoice=('You have choosen ball');
+            computerChoice=computerChoiceIs();
+            resultMsg =getMoves('Ball', computerChoice);
+            showResult('Ball', computerChoice, resultMsg); 
+            ">ball</button>
+            <button onclick="
+            yourChoice=('You have choosen stump');
+             computerChoice=computerChoiceIs();
+             resultMsg =getMoves('Stump', computerChoice);
+             showResult('Stump', computerChoice, resultMsg);
+            ">stump</button>
+            <button onclick="resetButton()">Reset</button>
+        <div class="box2">
+        <h3 class="yourchoice"></h3>
+        <h3 class="computerchois"></h3>
+        <h3 class="result"></h3>
+        <h3 class="score"></h3>
+        </div>
+        </div>
+        <script src="bat.js">
+           
+        </script>
+    </body>
+    </html>

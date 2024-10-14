@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: cursive;
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .color_contain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      width: 200px;
+      border-radius: 10px;
+      background-color: #ffeb38;
+    }
+    h1 {
+      text-align: center;
+      margin: 100px;
+      text-decoration: underline 4px dotted;
+   
+    }
+  </style>
+  <body>
+    <h1>Randome color generator</h1>
+    <div class="container">
+    </div>
+    <script>
+      let containerElem = document.querySelector(".container");
+
+      for (let i = 1; i <= 40; i++) {
+        let color_div = document.createElement("div");
+        color_div.classList.add("color_contain");
+        containerElem.appendChild(color_div);
+      }
+      const colorClass=document.querySelectorAll('.color_contain');
+      colorGen()
+      function colorGen(){
+        colorClass.forEach((colorClass)=>{
+          const newColorCode =newColor();
+          colorClass.style.backgroundColor=`#${newColorCode}`;
+          colorClass.innerText= newColorCode;
+        })
+      }
+      function newColor(){
+        const char = '0123456789abcdef';
+        const colorCodeLength= 6;
+        let colorCode = '';
+        for(let i= 0; i<colorCodeLength; i++){
+          let randomeNum = Math.floor(Math.random()*14);
+          colorCode += char.substring(randomeNum, randomeNum+1);
+        }
+        return colorCode;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+  <input type="checkbox" id="toggle" class="input">
+  <label for="toggle">
+      <span>x</span>
+      <span class="off">=></span>
+  </label>
+    <div class="slider">
+      <a href="#">Home</a>
+      <a href="#">menu</a>
+      <a href="#">images</a>
+      <a href="#">Thims</a>
+    </div>
+  <script>
+    let off= document.querySelector('.off')
+    let input = document.querySelector('.input');
+    let slider = document.querySelector('.slider');
+    let x = document.querySelector('span');
+
+    function slide() {
+      if (input.checked) {
+        slider.style.transform = 'translateX(-100%)';
+        x.style.transform = 'translateX(-330px)';
+        x.style.visibility= 'hidden';
+        off.style.visibility= 'visible';
+      } else {
+        slider.style.transform = 'translateX(0%)';
+        x.style.transform = 'translateX(0%)';
+        x.style.visibility= 'visible';
+        off.style.visibility= 'hidden';
+      }
+    }
+
+    input.addEventListener('click', slide);
+    // Initialize the slider state
+    slide();
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(252, 249, 249, 0.842);
+  }
+  .search_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 300px;
+    border-radius: 50px;
+    box-shadow: 6px 6px 10px rgba(144, 142, 142,.3) ,-6px -6px 10px rgba(242, 242, 242, 0.842);
+    position: relative;
+    background-color: rgba(242, 242, 242, 0.842);
+    transition: 1s ease-in-out;
+  }
+  input{
+    border: none;
+    outline: none;
+    width: 100%;
+    transition: 1s ease-in-out;
+    background-color: rgba(242, 242, 242, 0.842);
+    margin: 10px 50px;
+  }
+  .search{
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    transition: width .2s;
+    transition-delay: .4s;
+  }
+  .mic{
+    height: 30px;
+    position: absolute;
+    right: 1px;
+  }
+  .activ.search_container{
+    width: 30px;
+  }
+  .activ .mic{
+    right: 0;
+  }
+  .activ .search{
+    width: 0;
+  }
+  .activ input{
+    width: 0;
+  }
+</style>
+<body>
+  <div class="search_container activ">
+    <img src="https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/search-3-512.png" class="search">
+    <input type="text" placeholder="search....">
+    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-512.png" class="mic">
+  </div>
+  <script>
+    let mic=document.querySelector('.mic');
+    let activ=document.querySelector('.search_container');
+    mic.addEventListener('mouseover',()=>{
+      activ.classList.toggle('activ')
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.square{
+    /* margin: 10%; */
+    height: 200px;
+    width: 400px;
+    background-color: rgb(75, 236, 191);
+    position: relative;
+}
+.square2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(182, 254, 200);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+.square3{ 
+    height: 180px;
+    width: 180px;
+    background-color: rgb(83, 236, 121);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.square4{
+    height: 160px;
+    width: 160px;
+    background-color: rgb(190, 249, 103);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.square5{
+    height: 140px;
+    width: 140px;
+    background-color: rgb(98, 127, 242);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.square6{
+    height: 120px;
+    width: 120px;
+    background-color: rgb(251, 119, 236);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.square7{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(236, 187, 83);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.square8{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(236, 193, 83);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.square9{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(163, 244, 183);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+.container :hover{
+    background-color: chartreuse;
+    /* background-color: transparent; */
+
+}
+.square10{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(126, 83, 236);
+    border-radius: 50% 50% 0;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}

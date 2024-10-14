@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="today"></h1>
+    <script>
+      function greeting(personName= 'Dear'){
+        let date = new Date();
+        let hours= date.getHours();
+       let myDay= document.querySelector('.today');
+        if(hours>5 && hours<12){
+            myDay.innerHTML=`Good morning ${personName}`
+            console.log();
+        }else if(hours>=12 && hours<17){
+            myDay.innerHTML=`Good afternoon ${personName}`
+            console.log();
+        }else{
+            myDay.innerHTML=`Good night ${personName}`
+        }
+      }  
+      greeting();
+      
+    </script>
+</body>
+</html>

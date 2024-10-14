@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Welcome</h1>
+  <script src="index.js">
+  const program = {
+    name: "Sample Program",
+    version: "1.0",
+    author: "John Doe",
+    description: "A simple program object",
+    run: function() {
+      console.log(`Running ${this.name} version ${this.version}`);
+    },
+    update: function(newVersion) {
+      this.version = newVersion;
+      console.log(`Updated to version ${this.version}`);
+    }
+  };
+
+  // Example usage
+  program.run();
+  program.update("1.1");
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    .myButton{
+        font-weight: 600;
+        border: none;
+        padding: 10px;
+    }
+    .js-add{
+        background-color: #d01d1d;
+    }
+    .js-remove{
+        background-color: #1dd065;
+    }
+</style>
+<body>
+    <button class="myButton" onclick="clicked()"></button>
+    <button onclick="valueReset()">reset</button>
+    
+    <script>
+        let = currentVale=localStorage.getItem('currentValue') || 0;
+        function clicked(){
+            currentVale++;
+            localStorage.setItem('currentValue', currentVale)
+            updateValue();
+        }
+        valueReset=()=>{
+            localStorage.clear();
+            currentVale='0';
+            localStorage.setItem('currentValue', currentVale)
+            updateValue();
+        }
+        function updateValue(){
+            let innertext= document.querySelector('.myButton')
+            innertext.innerText=` Tap = ${currentVale}`
+            if(currentVale%2===0){
+                innertext.classList.add('js-remove');
+                innertext.classList.remove('js-add');
+            }else{
+                innertext.classList.add('js-add');
+                innertext.classList.remove('js-remove');
+        
+            }
+        }
+    updateValue();
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid black;
+  border-radius: 12px 12px 0 0;
+}
+.month{
+  font-size: 25px;
+  font-weight: 700;
+  color: aliceblue;
+  background: #c6461c;
+  border-radius: 10px 10px 0 0;
+}
+.day{
+  color: darkgray;
+  font-weight: 600;
+  font-size: 20px;
+}
+.year{
+  color: darkgray;
+  font-weight: 600;
+  font-size: 20px;
+}
+.date{
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 7vw;
+}

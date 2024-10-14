@@ -1,0 +1,10 @@
+.box1{
+    text-align: center;
+    height: 500px;
+    width: 600px;
+    border: 10px solid black;
+    }
+.box2{
+    border: 2px solid rgb(224, 222, 222);
+    text-align: start;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>array</title>
+</head>
+<body>
+    <script>
+
+// let array=[3,'3',2,'2','4',4,56,];
+// console.log(array);
+
+// console.log(array.length);
+// array.shift()
+// console.log(array);
+
+// let array=[3,4,2,8,7,4,56,];
+// // console.log(array);
+// let rrr=[];
+// let sum=0;
+// for(let i=0; i<array.length; i++){
+// sum += array[i];
+    
+// }
+// console.log(`sum of array ${sum}`);
+// let array=[3,4,2,8,7,4,56,];
+// // console.log(array);
+// let rrr=[];
+// let sum=0;
+// for(let i=0; i<array.length; i++){
+// rrr.push(array[i]);
+    
+// }
+// console.log(`New array of ${rrr}`);
+//#task1
+
+// let array=[5,,4];
+// // console.log(array);
+// array.push(7);
+// console.log(`New array of ${array}`);
+
+// array.unshift(5)
+// console.log(`New array of ${array}`);
+
+//#task2
+// let array=[3,4,2,8,7,4,56,];
+// function getElement(array, position){
+//     return array[position -1];
+// }
+// console.log(getElement(array, 7))
+
+
+// let array=[3,4,2,8,7,4,56,];
+// console.log(array);
+// let array2=array.slice(2,5);
+// console.log(array2);
+// function arrCopy(array){
+//     return array.slice(0, array.length);
+// }
+// console.log(arrCopy(array))
+
+// function isPrime(num){
+//     for(let i=2; i<num; i++){
+//         if(num%i===0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// let num=2;
+// let i=0;
+// while(true){
+//     if(isPrime(num)){
+//         console.log(num);
+//         i++;
+//         if(i>=15){
+//         break;
+//         }
+//     }
+//     num++;
+// }
+
+// function reverse(num){
+//     for(let i=num; i>0; i--){
+//         console.log(i)
+//     }
+// }
+// console.log(reverse(10));
+
+//Print positive number
+// let arr=[5,7,-6,9,-88,77];
+// for(let i=0; i<=arr.length; i++){
+//     if(arr[i]<0)continue;
+//     console.log(arr[i]);
+// }
+let arr=['coding', 'javaScript', 'course','webDev'];
+let result=' ';
+for(let i=0; i<=arr.length; i++){
+    result += arr[i]+' ';
+}
+console.log(result);
+let joinArr= arr.join(' ')
+console.log(joinArr);
+</script>
+</body>
+</html>

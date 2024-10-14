@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+}
+.section_hero{
+    background-image: url(img/pineapple.img.avif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    
+}
+.bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.bg h1{
+    color: #fff;
+    margin-left: 20px;
+}
+.btn1{
+    background-color: rgba(103, 63, 141, 0);
+    border: none;
+    padding: 0.4rem 1.2rem;
+    color: #fff;
+}
+.btn2{
+    background-color: rgba(103, 63, 141, 0);
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid #ffffffc1;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.input_txt{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-top: 10%;
+}
+.select{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 8vw;
+    border: 1px solid #ffffff60;
+}
+.input1{
+    height: 40px;
+    max-width: 70vw;
+    width: 100vw;
+    border: 1px solid #ffffff60;
+}
+.search_btn{
+    margin: 6px;
+    padding: 6px 22px;
+    background-color: #004cffc8;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px 
+}
+.tag{
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    
+    
+}
+.tag_txt{
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 8px;
+    background-color: rgba(255, 255, 255, 0.132);
+    
+}
